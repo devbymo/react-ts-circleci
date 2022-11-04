@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  install:
+  deploy:
     docker:
       - image: cimg/node:16.10
     steps:
@@ -20,11 +20,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-  deploy:
-    docker:
-      - image: cimg/node:16.10
-    steps:
-      - checkout # check out the code in the project directory
       # run tests!
       - run:
           name: Run Tests
@@ -38,10 +33,7 @@ jobs:
 workflows:
   build_deploy:
     jobs:
-      - install
       - deploy
-          requires:
-            - install
 # version: 2.1
 # jobs:
 #   install:
