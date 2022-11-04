@@ -18,6 +18,8 @@ jobs:
           paths:
             - node_modules
   test:
+    machine:
+      image: ubuntu-1604:201903-01
     docker:
       - image: circleci/node:10.16.0
     steps:
