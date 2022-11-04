@@ -39,6 +39,8 @@ workflows:
     jobs:
       - install
       - deploy
+          requires:
+            - install
 # version: 2.1
 # jobs:
 #   install:
