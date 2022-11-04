@@ -37,6 +37,7 @@ jobs:
 workflows:
   build_deploy:
     jobs:
+      - install
       - deploy
 # version: 2.1
 # jobs:
