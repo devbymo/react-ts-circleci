@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello react from circleci</p>
+        <p>Hello react from circleci deployed in netlify</p>
       </header>
     </div>
   );
