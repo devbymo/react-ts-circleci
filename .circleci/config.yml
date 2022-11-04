@@ -24,10 +24,11 @@ jobs:
     docker:
       - image: cimg/node:16.10
     steps:
+      - checkout # check out the code in the project directory
       # run tests!
       - run:
           name: Run Tests
-          command: npm test
+          command: npm run test
       - run:
           name: Build
           command: npm run build
